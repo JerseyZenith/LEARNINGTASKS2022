@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Main extends Inheritance{
+public class Main extends Multiplication{
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Calsetera");
@@ -18,6 +18,10 @@ public class Main extends Inheritance{
         panelOne.setBounds(30,60,300,80);
         panelTwo.setBounds(30,200,300,40);
 
+        panelTitle.setBackground(Color.lightGray);
+        panelOne.setBackground(Color.lightGray);
+        panelTwo.setBackground(Color.lightGray);
+
         JLabel labelOne, labelTwo, labelTitle;
 
         JTextField tFieldOne, tFieldTwo;
@@ -26,7 +30,7 @@ public class Main extends Inheritance{
         tFieldTwo = new JTextField(15);
         tFieldTwo.setPreferredSize(new Dimension(90,20));
 
-        labelTitle = new JLabel("Addition Calculator", JLabel.CENTER);
+        labelTitle = new JLabel("Multiplication Calculator", JLabel.CENTER);
         labelOne = new JLabel("First Value");
         labelTwo = new JLabel("Second Value");
 
@@ -67,12 +71,12 @@ public class Main extends Inheritance{
         frame.setVisible(true);
     }
 }
-class Inheritance {
+class Multiplication {
 
     public static int computeValue(String value1, String value2){
         int val1 = Integer.parseInt(value1);
         int val2 = Integer.parseInt(value2);
-        int sum = val1 + val2;
+        int sum = val1 * val2;
         return sum;
     }
     public static void displayMessage(String message){
